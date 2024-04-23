@@ -1,0 +1,25 @@
+<div class="card mt-5">
+    <div class="card-body">
+
+
+        <label for="">Iveskite skaiciu x:</label>
+        <input class="form-control mb-3" type="number" name="x" [(ngModel)]="x"><br>
+        <label for="">Iveskite skaiciu y:</label>
+        <input class="form-control  mb-3" type="number" name="y" [(ngModel)]="y"><br>
+        <button class="btn btn-primary" (click)="skaiciuok()" [disabled]="x==null || y==null">Sudetis</button>
+        <div class="alert alert-info mt-3" *ngIf="suma!=null">
+            Sum: {{ suma }}
+        </div>
+    </div>
+</div>
+<!-- 
+
+[value]="x" 
+[class]="z"  -- atributui priskiriame reiksme is typeScript failo.
+(click)="metodas"      -- kai bus veiksmas, tuomet iskviesti metoda is TS failo.
+[(ngModel)]="z"        -- two-way-binding, paima reiksme is TS failo, o koreguojant HTML'e istato i TS faila.
+
+{{ teksto isvedimas }}
+
+*ngIf="5==5"                 -- strukturine direktyva
+-->
