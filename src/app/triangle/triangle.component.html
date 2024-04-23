@@ -1,0 +1,16 @@
+<div class="card mt-5">
+    <div class="card-body">
+
+
+        <label for="">Iveskite skaiciu x:</label>
+        <input class="form-control mb-3" type="number" name="x" [(ngModel)]="x"><br>
+        <label for="">Iveskite skaiciu y:</label>
+        <input class="form-control  mb-3" type="number" name="y" [(ngModel)]="y"><br>
+        <label for="">Iveskite skaiciu z:</label>
+        <input class="form-control  mb-3" type="number" name="z" [(ngModel)]="z"><br>
+        <button class="btn btn-primary" (click)="findArea()" [disabled]="x==null || y==null || z==null">Skaiciuoti</button>
+        <div class="alert alert-info mt-3" *ngIf="plotas!=null">
+            Plotas: {{ plotas }}
+        </div>
+    </div>
+</div>
